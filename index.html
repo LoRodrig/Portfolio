@@ -1,662 +1,919 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Lorenzo Rodrigues | Portfólio de Dados</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Segoe UI", Arial, sans-serif;
     }
 
-    body {
-      background: #07111f;
-      color: #f5f7fa;
-      line-height: 1.6;
+    html{
+      scroll-behavior:smooth;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    body{
+      background:#07111f;
+      color:#f5f7fa;
+      line-height:1.6;
+      overflow-x:hidden;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:1000;
+      background:rgba(7,17,31,0.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-content{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:800;
+      color:#38bdf8;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:24px;
+    }
+
+    .nav-links a{
+      color:#cbd5e1;
+      transition:0.3s;
+      font-size:14px;
+    }
+
+    .nav-links a:hover{
+      color:#38bdf8;
+    }
+
+    /* HERO */
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+
       background:
-        radial-gradient(circle at top right, rgba(0, 174, 255, 0.25), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(0, 255, 179, 0.18), transparent 35%),
-        #07111f;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border: 1px solid rgba(0, 174, 255, 0.12);
-      border-radius: 50%;
-      right: -250px;
-      top: -250px;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      background: rgba(7, 17, 31, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-content {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-    }
-
-    .logo {
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #38bdf8;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      font-size: 14px;
-      color: #cbd5e1;
-    }
-
-    .nav-links a:hover {
-      color: #38bdf8;
-    }
-
-    .hero {
-      position: relative;
-      z-index: 2;
-      padding-top: 80px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 16px;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      border-radius: 999px;
-      color: #7dd3fc;
-      font-size: 14px;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 78px);
-      line-height: 1.05;
-      max-width: 900px;
-      margin-bottom: 24px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(90deg, #38bdf8, #22c55e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      max-width: 760px;
-      color: #cbd5e1;
-      font-size: 19px;
-      margin-bottom: 34px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 22px;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #0284c7, #22c55e);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #e2e8f0;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
-    section {
-      padding: 90px 0;
-    }
-
-    .section-title {
-      margin-bottom: 45px;
-    }
-
-    .section-title span {
-      color: #38bdf8;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      margin-top: 8px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 32px;
-    }
-
-    .card {
-      background: rgba(15, 23, 42, 0.82);
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.22);
-    }
-
-    .card p {
-      color: #cbd5e1;
-      margin-bottom: 14px;
-    }
-
-    .stats {
-      display: grid;
-      gap: 18px;
-    }
-
-    .stat {
-      padding: 22px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(56,189,248,0.12), rgba(34,197,94,0.08));
-      border: 1px solid rgba(56,189,248,0.18);
-    }
-
-    .stat strong {
-      font-size: 28px;
-      display: block;
-      color: #7dd3fc;
-    }
-
-    .stat small {
-      color: #cbd5e1;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill {
-      padding: 10px 14px;
-      background: rgba(56,189,248,0.1);
-      color: #bae6fd;
-      border: 1px solid rgba(56,189,248,0.22);
-      border-radius: 999px;
-      font-size: 14px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .project-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 330px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(56,189,248,0.14), transparent 45%);
-      pointer-events: none;
-    }
-
-    .project-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #0284c7, #22c55e);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      margin-bottom: 22px;
-    }
-
-    .project-card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .project-card p {
-      color: #cbd5e1;
-      font-size: 15px;
-    }
-
-    .project-links {
-      margin-top: 22px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .project-links a {
-      font-size: 13px;
-      padding: 9px 12px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.07);
-      color: #e2e8f0;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .project-links a:hover {
-      background: rgba(56,189,248,0.15);
-      color: #7dd3fc;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 20px;
-    }
-
-    .timeline-item {
-      border-left: 3px solid #38bdf8;
-      padding-left: 22px;
-    }
-
-    .timeline-item h3 {
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
-
-    .timeline-item span {
-      color: #7dd3fc;
-      font-size: 14px;
-    }
-
-    .timeline-item p {
-      color: #cbd5e1;
-      margin-top: 8px;
-    }
-
-    .contact {
-      text-align: center;
-      background:
-        radial-gradient(circle at center, rgba(56,189,248,0.12), transparent 45%),
+        radial-gradient(circle at top right, rgba(0,174,255,0.22), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(0,255,179,0.15), transparent 35%),
         #07111f;
     }
 
-    .contact h2 {
-      font-size: 38px;
-      margin-bottom: 18px;
+    header::before{
+      content:"";
+      position:absolute;
+      width:650px;
+      height:650px;
+      border-radius:50%;
+      border:1px solid rgba(56,189,248,0.08);
+      top:-280px;
+      right:-280px;
     }
 
-    .contact p {
-      color: #cbd5e1;
-      max-width: 700px;
-      margin: 0 auto 30px;
+    .hero{
+      position:relative;
+      z-index:2;
+      padding-top:90px;
     }
 
-    footer {
-      padding: 26px 0;
-      text-align: center;
-      color: #94a3b8;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      font-size: 14px;
+    .badge{
+      display:inline-block;
+      padding:8px 16px;
+      border-radius:999px;
+      background:rgba(56,189,248,0.12);
+      border:1px solid rgba(56,189,248,0.3);
+      color:#7dd3fc;
+      margin-bottom:24px;
+      font-size:14px;
     }
 
-    @media (max-width: 900px) {
+    h1{
+      font-size:clamp(44px, 7vw, 78px);
+      line-height:1.05;
+      max-width:900px;
+      margin-bottom:24px;
+    }
+
+    .gradient-text{
+      background:linear-gradient(90deg, #38bdf8, #22c55e);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero p{
+      max-width:760px;
+      color:#cbd5e1;
+      font-size:19px;
+      margin-bottom:34px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    .btn{
+      padding:14px 22px;
+      border-radius:12px;
+      font-weight:700;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, #0284c7, #22c55e);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 30px rgba(34,197,94,0.22);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.16);
+      background:rgba(255,255,255,0.03);
+      color:#e2e8f0;
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,0.08);
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      margin-bottom:45px;
+    }
+
+    .section-title span{
+      color:#38bdf8;
+      font-size:14px;
+      letter-spacing:2px;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .section-title h2{
+      font-size:38px;
+      margin-top:8px;
+    }
+
+    /* CARDS */
+
+    .card{
+      background:rgba(15,23,42,0.84);
+      border:1px solid rgba(148,163,184,0.16);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.22);
+    }
+
+    .card p{
+      color:#cbd5e1;
+      margin-bottom:14px;
+    }
+
+    /* ABOUT */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:32px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .skill{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(56,189,248,0.1);
+      border:1px solid rgba(56,189,248,0.22);
+      color:#bae6fd;
+      font-size:14px;
+    }
+
+    .stats{
+      display:grid;
+      gap:18px;
+    }
+
+    .stat{
+      padding:22px;
+      border-radius:18px;
+      background:linear-gradient(
+        135deg,
+        rgba(56,189,248,0.12),
+        rgba(34,197,94,0.08)
+      );
+      border:1px solid rgba(56,189,248,0.16);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:30px;
+      color:#7dd3fc;
+      margin-bottom:8px;
+    }
+
+    .stat small{
+      color:#cbd5e1;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    .project-card{
+      min-height:420px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top right,
+        rgba(56,189,248,0.12),
+        transparent 45%);
+      pointer-events:none;
+    }
+
+    .featured{
+      border:1px solid rgba(34,197,94,0.35);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,197,94,0.08),
+          rgba(56,189,248,0.06)
+        ),
+        rgba(15,23,42,0.84);
+    }
+
+    .tag{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(34,197,94,0.12);
+      color:#86efac;
+      border:1px solid rgba(34,197,94,0.28);
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .project-icon{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      background:linear-gradient(135deg, #0284c7, #22c55e);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:900;
+      margin-bottom:22px;
+    }
+
+    .project-card h3{
+      font-size:24px;
+      margin-bottom:14px;
+    }
+
+    .project-card p{
+      color:#cbd5e1;
+      font-size:15px;
+    }
+
+    .project-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+      position:relative;
+      z-index:2;
+    }
+
+    .project-links a{
+      padding:10px 14px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.07);
+      border:1px solid rgba(255,255,255,0.12);
+      color:#e2e8f0;
+      font-size:13px;
+      transition:0.3s;
+    }
+
+    .project-links a:hover{
+      background:rgba(56,189,248,0.15);
+      color:#7dd3fc;
+    }
+
+    /* TIMELINE */
+
+    .timeline{
+      display:grid;
+      gap:24px;
+    }
+
+    .timeline-item{
+      border-left:3px solid #38bdf8;
+      padding-left:22px;
+    }
+
+    .timeline-item h3{
+      font-size:20px;
+      margin-bottom:4px;
+    }
+
+    .timeline-item span{
+      color:#7dd3fc;
+      font-size:14px;
+    }
+
+    .timeline-item p{
+      margin-top:8px;
+      color:#cbd5e1;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      text-align:center;
+
+      background:
+        radial-gradient(circle at center,
+        rgba(56,189,248,0.12),
+        transparent 45%),
+        #07111f;
+    }
+
+    .contact h2{
+      font-size:40px;
+      margin-bottom:18px;
+    }
+
+    .contact p{
+      color:#cbd5e1;
+      max-width:720px;
+      margin:0 auto 32px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:26px 0;
+      text-align:center;
+      color:#94a3b8;
+      border-top:1px solid rgba(255,255,255,0.08);
+      font-size:14px;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:950px){
+
       .about-grid,
-      .projects-grid {
-        grid-template-columns: 1fr;
+      .projects-grid{
+        grid-template-columns:1fr;
       }
 
-      .nav-links {
-        display: none;
+      .nav-links{
+        display:none;
       }
 
-      section {
-        padding: 70px 0;
+      section{
+        padding:70px 0;
       }
+
+      h1{
+        font-size:46px;
+      }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
+
   <nav>
+
     <div class="nav-content">
-      <div class="logo">Lorenzo Rodrigues</div>
+
+      <div class="logo">
+        Lorenzo Rodrigues
+      </div>
+
       <div class="nav-links">
         <a href="#sobre">Sobre</a>
         <a href="#projetos">Projetos</a>
         <a href="#formacao">Formação</a>
         <a href="#contato">Contato</a>
       </div>
+
     </div>
+
   </nav>
 
+  <!-- HERO -->
+
   <header>
+
     <div class="container hero">
-      <div class="badge">Business Intelligence • Dados • Python • IA</div>
+
+      <div class="badge">
+        📊 Business Intelligence • 🐍 Python • 🧠 Ciência de Dados • 🤖 IA
+      </div>
 
       <h1>
-        Transformando dados em
-        <span class="gradient-text">decisões inteligentes</span>
+        Transformando
+        <span class="gradient-text">
+          dados em decisões inteligentes
+        </span>
       </h1>
 
       <p>
-        Sou Lorenzo Rodrigues, Analista de Business Intelligence com foco em Power BI,
-        automações em Python, ETL, ciência de dados e soluções com agentes de IA.
-        Crio dashboards, pipelines e análises que conectam dados ao resultado do negócio.
+        Sou Lorenzo Rodrigues, profissional de Business Intelligence e Ciência de Dados.
+        Desenvolvo soluções utilizando Power BI, Python, automações e Machine Learning
+        para transformar dados em insights estratégicos.
       </p>
 
       <div class="buttons">
-        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-        <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+
+        <a href="#projetos" class="btn btn-primary">
+          🚀 Ver Projetos
+        </a>
+
+        <a
+          href="https://github.com/LoRodrig"
+          target="_blank"
+          class="btn btn-secondary"
+        >
+          💻 GitHub
+        </a>
+
       </div>
+
     </div>
+
   </header>
 
+  <!-- SOBRE -->
+
   <section id="sobre">
+
     <div class="container">
+
       <div class="section-title">
         <span>Sobre mim</span>
-        <h2>Perfil profissional</h2>
+        <h2>📌 Perfil Profissional</h2>
       </div>
 
       <div class="about-grid">
+
         <div class="card">
+
           <p>
-            Atuo na área de dados desenvolvendo soluções de Business Intelligence,
-            automações e integrações para apoiar áreas como logística, financeiro,
-            operações, RH e gestão.
+            Atuo com desenvolvimento de soluções de Business Intelligence,
+            automações e Ciência de Dados aplicada ao negócio.
           </p>
 
           <p>
-            Tenho experiência com criação de dashboards no Power BI, modelagem de dados,
-            desenvolvimento de medidas DAX, consultas SQL, ETL com Python e Pentaho,
-            além de automações para extração, tratamento e atualização de dados.
+            Tenho experiência com Power BI, DAX, SQL, PostgreSQL, Python,
+            ETL, automações web e análise de dados.
           </p>
 
           <p>
-            Também desenvolvo projetos com ciência de dados, análises preditivas e agentes
-            de IA utilizando ferramentas como Python, n8n, bancos relacionais e bancos vetoriais.
+            Meu foco é construir soluções completas:
+            desde a extração dos dados até a geração de insights estratégicos.
           </p>
 
           <div class="skills">
-            <span class="skill">Power BI</span>
-            <span class="skill">DAX</span>
-            <span class="skill">Power Query</span>
-            <span class="skill">Python</span>
-            <span class="skill">SQL</span>
-            <span class="skill">PostgreSQL</span>
-            <span class="skill">Pentaho</span>
-            <span class="skill">n8n</span>
-            <span class="skill">Machine Learning</span>
-            <span class="skill">Automação</span>
-            <span class="skill">ETL</span>
-            <span class="skill">IA Generativa</span>
+
+            <span class="skill">📊 Power BI</span>
+            <span class="skill">📈 DAX</span>
+            <span class="skill">🐍 Python</span>
+            <span class="skill">🧠 Machine Learning</span>
+            <span class="skill">⚙️ ETL</span>
+            <span class="skill">🗄️ SQL</span>
+            <span class="skill">🐘 PostgreSQL</span>
+            <span class="skill">📊 Power Query</span>
+            <span class="skill">🤖 IA</span>
+
           </div>
+
         </div>
 
         <div class="stats">
+
           <div class="stat">
-            <strong>BI</strong>
-            <small>Dashboards executivos, operacionais e indicadores de performance</small>
+            <strong>📊 BI</strong>
+            <small>
+              Dashboards executivos e indicadores estratégicos
+            </small>
           </div>
 
           <div class="stat">
-            <strong>Python</strong>
-            <small>Automações, extrações web, tratamento de dados e integração de sistemas</small>
+            <strong>🐍 Python</strong>
+            <small>
+              Automações, ETLs e análise de dados
+            </small>
           </div>
 
           <div class="stat">
-            <strong>IA</strong>
-            <small>Agentes inteligentes com n8n, RAG, bancos vetoriais e automações</small>
+            <strong>🧠 IA</strong>
+            <small>
+              Projetos com Machine Learning e Inteligência Artificial
+            </small>
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- PROJETOS -->
+
   <section id="projetos">
+
     <div class="container">
+
       <div class="section-title">
-        <span>Portfólio</span>
-        <h2>Projetos em destaque</h2>
+        <span>Projetos</span>
+        <h2>🚀 Projetos e Dashboards</h2>
       </div>
 
       <div class="projects-grid">
 
-        <div class="card project-card">
+        <!-- MACHINE LEARNING -->
+
+        <div class="card project-card featured">
+
           <div>
-            <div class="project-icon">BI</div>
-            <h3>Dashboards Power BI</h3>
+
+            <span class="tag">
+              🚀 Projeto Publicado
+            </span>
+
+            <div class="project-icon">
+              ML
+            </div>
+
+            <h3>
+              🏨 Predição de Cancelamento de Reservas
+            </h3>
+
             <p>
-              Painéis interativos para acompanhamento de indicadores, metas,
-              desempenho operacional, financeiro, logística, vendas e produtividade.
+              Projeto de Ciência de Dados desenvolvido para prever cancelamentos
+              de reservas em hotéis utilizando Machine Learning.
             </p>
+
+            <p>
+              O projeto utiliza análise exploratória, tratamento de dados,
+              engenharia de features e Random Forest para identificar padrões
+              associados ao cancelamento de reservas.
+            </p>
+
+            <p>
+              <strong>🎯 Objetivo:</strong><br>
+              Reduzir perdas financeiras e apoiar decisões estratégicas
+              através da previsão de reservas com maior risco de cancelamento.
+            </p>
+
+            <p>
+              <strong>📈 Resultado:</strong><br>
+              Modelo com aproximadamente 89% de acurácia.
+            </p>
+
+            <p>
+              <strong>🛠️ Tecnologias:</strong><br>
+              Python • Pandas • Scikit-learn • Matplotlib • Seaborn • Jupyter Notebook
+            </p>
+
           </div>
 
           <div class="project-links">
-            <a href="#" target="_blank">Link Power BI 1</a>
-            <a href="#" target="_blank">Link Dashboard</a>
+
+            <a
+              href="https://github.com/LoRodrig/Hotel_Dataset_Analysis"
+              target="_blank"
+            >
+              💻 Ver Projeto
+            </a>
+
+            <a
+              href="https://github.com/LoRodrig/Hotel_Dataset_Analysis/tree/main/Predi%C3%A7%C3%A3o_Cancelamento"
+              target="_blank"
+            >
+              📓 Notebook
+            </a>
+
           </div>
+
         </div>
 
+        <!-- DASHBOARD -->
+
         <div class="card project-card">
+
           <div>
-            <div class="project-icon">ETL</div>
-            <h3>ETLs em Python</h3>
+
+            <span class="tag">
+              📊 Dashboard Publicado
+            </span>
+
+            <div class="project-icon">
+              BI
+            </div>
+
+            <h3>
+              💰 Dashboard de Pagamento de Folha
+            </h3>
+
             <p>
-              Pipelines para extração, transformação e carga de dados, integrando sistemas,
-              arquivos, APIs, bancos PostgreSQL e processos automatizados.
+              Dashboard interativo desenvolvido para análise de folha de pagamento,
+              encargos e custos por colaborador.
             </p>
+
+            <p>
+              O projeto permite acompanhar indicadores financeiros relacionados à folha,
+              filtrando colaboradores, cargos, setores e períodos para análise executiva.
+            </p>
+
+            <p>
+              <strong>📌 Principais funcionalidades:</strong><br>
+              📊 Evolução mensal da folha<br>
+              💰 Análise de proventos e descontos<br>
+              🏢 Custo por setor<br>
+              👥 Filtros dinâmicos por colaborador<br>
+              📈 Indicadores executivos
+            </p>
+
+            <p>
+              <strong>🛠️ Tecnologias:</strong><br>
+              HTML • CSS • JavaScript • CSV • GitHub Pages
+            </p>
+
           </div>
 
           <div class="project-links">
-            <a href="#" target="_blank">Ver Código</a>
-            <a href="#" target="_blank">Documentação</a>
+
+            <a
+              href="https://lorodrig.github.io/Dashboard-Pagamento-de-Folha/"
+              target="_blank"
+            >
+              🌐 Abrir Dashboard
+            </a>
+
+            <a
+              href="https://github.com/LoRodrig/Dashboard-Pagamento-de-Folha"
+              target="_blank"
+            >
+              💻 Ver Código
+            </a>
+
           </div>
+
         </div>
 
+        <!-- FUTUROS -->
+
         <div class="card project-card">
+
           <div>
-            <div class="project-icon">PY</div>
-            <h3>Automações em Python</h3>
+
+            <div class="project-icon">
+              AI
+            </div>
+
+            <h3>
+              🤖 Próximos Projetos
+            </h3>
+
             <p>
-              Robôs para download de relatórios, automações web, organização de arquivos,
-              atualização de bases e redução de processos manuais.
+              Espaço reservado para futuros projetos envolvendo:
             </p>
+
+            <p>
+              ⚙️ Automação<br>
+              🤖 Inteligência Artificial<br>
+              🧠 Machine Learning<br>
+              ☁️ Integrações Cloud<br>
+              🔄 Engenharia de Dados
+            </p>
+
+            <p>
+              <strong>🛠️ Tecnologias:</strong><br>
+              Python • APIs • SQL • IA Generativa
+            </p>
+
           </div>
 
           <div class="project-links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Demonstração</a>
-          </div>
-        </div>
 
-        <div class="card project-card">
-          <div>
-            <div class="project-icon">ML</div>
-            <h3>Análises Preditivas</h3>
-            <p>
-              Projetos com modelos de machine learning, classificação, previsão,
-              análise de padrões e identificação de comportamentos anômalos.
-            </p>
+            <a href="#">
+              🚀 Em desenvolvimento
+            </a>
+
           </div>
 
-          <div class="project-links">
-            <a href="#" target="_blank">Notebook</a>
-            <a href="#" target="_blank">Relatório</a>
-          </div>
-        </div>
-
-        <div class="card project-card">
-          <div>
-            <div class="project-icon">AI</div>
-            <h3>Agente de IA com n8n</h3>
-            <p>
-              Desenvolvimento de agentes inteligentes com fluxos n8n, integração com banco
-              de dados, documentos, PDFs, busca semântica e automação de respostas.
-            </p>
-          </div>
-
-          <div class="project-links">
-            <a href="#" target="_blank">Fluxo n8n</a>
-            <a href="#" target="_blank">Case Técnico</a>
-          </div>
-        </div>
-
-        <div class="card project-card">
-          <div>
-            <div class="project-icon">SQL</div>
-            <h3>Modelagem e Banco de Dados</h3>
-            <p>
-              Criação de views, consultas SQL, modelagem de dados, organização de tabelas,
-              performance e estruturação de bases para BI e automações.
-            </p>
-          </div>
-
-          <div class="project-links">
-            <a href="#" target="_blank">Scripts SQL</a>
-            <a href="#" target="_blank">Modelo de Dados</a>
-          </div>
         </div>
 
       </div>
+
     </div>
+
   </section>
 
+  <!-- FORMAÇÃO -->
+
   <section id="formacao">
+
     <div class="container">
+
       <div class="section-title">
         <span>Carreira</span>
-        <h2>Formação e experiência</h2>
+        <h2>🎓 Formação e Experiência</h2>
       </div>
 
       <div class="card timeline">
 
         <div class="timeline-item">
-          <h3>Analista de Business Intelligence</h3>
-          <span>BI • Dados • Automação • Indicadores</span>
+
+          <h3>
+            📊 Analista de Business Intelligence
+          </h3>
+
+          <span>
+            BI • Dados • Indicadores • Automação
+          </span>
+
           <p>
-            Atuação com desenvolvimento de dashboards, criação de indicadores,
-            automação de processos, integração de dados e suporte analítico para tomada de decisão.
+            Desenvolvimento de dashboards, indicadores estratégicos,
+            integração de dados e automação de processos.
           </p>
+
         </div>
 
         <div class="timeline-item">
-          <h3>Graduação em Análise e Desenvolvimento de Sistemas</h3>
-          <span>Formação em tecnologia</span>
+
+          <h3>
+            💻 Graduação em Análise e Desenvolvimento de Sistemas
+          </h3>
+
+          <span>
+            Formação em tecnologia
+          </span>
+
           <p>
-            Base em desenvolvimento de sistemas, banco de dados, programação,
-            engenharia de software e soluções digitais.
+            Base sólida em desenvolvimento de sistemas,
+            banco de dados e engenharia de software.
           </p>
+
         </div>
 
         <div class="timeline-item">
-          <h3>Pós-graduação em Ciência de Dados</h3>
-          <span>Data Science • Estatística • Machine Learning</span>
-          <p>
-            Aprofundamento em análise de dados, estatística aplicada, modelos preditivos,
-            ciência de dados e inteligência artificial.
-          </p>
-        </div>
 
-        <div class="timeline-item">
-          <h3>Projetos práticos em dados e IA</h3>
-          <span>Power BI • Python • n8n • SQL • IA</span>
+          <h3>
+            🧠 Pós-graduação em Ciência de Dados
+          </h3>
+
+          <span>
+            Data Science • Machine Learning • Estatística
+          </span>
+
           <p>
-            Desenvolvimento de soluções envolvendo dashboards, ETL, automações,
-            agentes inteligentes, análise preditiva e bancos de dados.
+            Aprofundamento em análise de dados,
+            modelos preditivos e inteligência artificial.
           </p>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
+  <!-- CONTATO -->
+
   <section id="contato" class="contact">
+
     <div class="container">
-      <h2>Vamos conectar dados ao negócio?</h2>
+
+      <h2>
+        🚀 Vamos conectar dados ao negócio?
+      </h2>
 
       <p>
-        Estou sempre buscando criar soluções que tornem processos mais inteligentes,
-        automatizados e orientados por dados.
+        Busco desenvolver soluções que transformem dados em decisões inteligentes,
+        utilizando tecnologia, automação e análise estratégica.
       </p>
 
       <div class="buttons" style="justify-content:center;">
-        <a href="https://www.linkedin.com/in/lorenzo-rodr" target="_blank" class="btn btn-primary">
-          LinkedIn
+
+        <a
+          href="https://github.com/LoRodrig"
+          target="_blank"
+          class="btn btn-primary"
+        >
+          💻 GitHub
         </a>
 
-        <a href="https://github.com/" target="_blank" class="btn btn-secondary">
-          GitHub
+        <a
+          href="mailto:rodrigueslorenzo092@gmail.com"
+          class="btn btn-secondary"
+        >
+          ✉️ E-mail
         </a>
 
-        <a href="mailto:rodrigueslorenzo092@gmail.com" class="btn btn-secondary">
-          E-mail
+        <a
+          href="#"
+          class="btn btn-secondary"
+        >
+          🔗 LinkedIn
         </a>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
+
     <div class="container">
       © 2026 Lorenzo Rodrigues — Portfólio de Dados, BI, Python e IA.
     </div>
+
   </footer>
 
 </body>
+
 </html>
