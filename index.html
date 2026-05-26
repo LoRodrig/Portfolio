@@ -181,8 +181,6 @@
       background:rgba(255,255,255,0.08);
     }
 
-    /* SECTION */
-
     section{
       padding:95px 0;
     }
@@ -204,8 +202,6 @@
       margin-top:8px;
     }
 
-    /* CARD */
-
     .card{
       background:rgba(15,23,42,0.88);
       border:1px solid rgba(148,163,184,0.16);
@@ -219,7 +215,7 @@
       margin-bottom:14px;
     }
 
-    /* ABOUT */
+    /* SOBRE */
 
     .about-grid{
       display:grid;
@@ -272,7 +268,7 @@
       font-size:15px;
     }
 
-    /* PROJECTS */
+    /* PROJETOS */
 
     .projects-grid{
       display:grid;
@@ -285,25 +281,12 @@
       display:flex;
       flex-direction:column;
       justify-content:space-between;
-      position:relative;
-      overflow:hidden;
       transition:0.3s;
     }
 
     .project-card:hover{
       transform:translateY(-6px);
       border-color:rgba(56,189,248,0.35);
-    }
-
-    .project-card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at top right,
-        rgba(56,189,248,0.10),
-        transparent 45%);
-      pointer-events:none;
     }
 
     .featured{
@@ -349,18 +332,11 @@
       margin-bottom:14px;
     }
 
-    .project-card p{
-      color:#cbd5e1;
-      font-size:15px;
-    }
-
     .project-links{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       margin-top:24px;
-      position:relative;
-      z-index:2;
     }
 
     .project-links a{
@@ -407,11 +383,10 @@
       color:#cbd5e1;
     }
 
-    /* CONTACT */
+    /* CONTATO */
 
     .contact{
       text-align:center;
-
       background:
         radial-gradient(circle at center,
         rgba(56,189,248,0.12),
@@ -431,8 +406,6 @@
       font-size:18px;
     }
 
-    /* FOOTER */
-
     footer{
       padding:28px 0;
       text-align:center;
@@ -440,8 +413,6 @@
       border-top:1px solid rgba(255,255,255,0.08);
       font-size:14px;
     }
-
-    /* RESPONSIVO */
 
     @media(max-width:950px){
 
@@ -453,16 +424,12 @@
         display:none;
       }
 
-      section{
-        padding:70px 0;
+      .projects-grid{
+        grid-template-columns:1fr;
       }
 
       h1{
-        font-size:50px;
-      }
-
-      .projects-grid{
-        grid-template-columns:1fr;
+        font-size:52px;
       }
 
     }
@@ -472,8 +439,6 @@
 </head>
 
 <body>
-
-  <!-- NAVBAR -->
 
   <nav>
 
@@ -486,518 +451,13 @@
       <div class="nav-links">
         <a href="#sobre">Sobre</a>
         <a href="#projetos">Projetos</a>
-        <a href="#formacao">Formação</a>
+        <a href="#formacao">Experiência</a>
         <a href="#contato">Contato</a>
       </div>
 
     </div>
 
   </nav>
-
-  <!-- HERO -->
-
-  <header>
-
-    <div class="container hero">
-
-      <div class="badge">
-        📊 Business Intelligence • 🐍 Python • 🧠 Ciência de Dados • 🤖 IA
-      </div>
-
-      <h1>
-        Transformando
-        <span class="gradient-text">
-          dados em decisões inteligentes
-        </span>
-      </h1>
-
-      <p>
-        Sou Lorenzo Rodrigues, profissional de Business Intelligence e Ciência de Dados.
-        Desenvolvo soluções utilizando Power BI, Python, automações, ETL,
-        Machine Learning e Inteligência Artificial para transformar dados em insights estratégicos.
-      </p>
-
-      <div class="buttons">
-
-        <a href="#projetos" class="btn btn-primary">
-          🚀 Ver Projetos
-        </a>
-
-        <a
-          href="https://github.com/LoRodrig"
-          target="_blank"
-          class="btn btn-secondary"
-        >
-          💻 GitHub
-        </a>
-
-      </div>
-
-    </div>
-
-  </header>
-
-  <!-- SOBRE -->
-
-  <section id="sobre">
-
-    <div class="container">
-
-      <div class="section-title">
-        <span>Sobre mim</span>
-        <h2>📌 Perfil Profissional</h2>
-      </div>
-
-      <div class="about-grid">
-
-        <div class="card">
-
-          <p>
-            Atuo com desenvolvimento de soluções de Business Intelligence,
-            Engenharia de Dados, automações e Ciência de Dados aplicada ao negócio.
-          </p>
-
-          <p>
-            Tenho experiência com Power BI, DAX, SQL, PostgreSQL, Python,
-            ETL, automações web, análise de dados e integração de sistemas.
-          </p>
-
-          <p>
-            Meu foco é construir soluções completas:
-            desde a extração dos dados até a geração de insights estratégicos,
-            utilizando tecnologia para otimizar processos e apoiar tomadas de decisão.
-          </p>
-
-          <div class="skills">
-
-            <span class="skill">📊 Power BI</span>
-            <span class="skill">📈 DAX</span>
-            <span class="skill">🐍 Python</span>
-            <span class="skill">🧠 Machine Learning</span>
-            <span class="skill">⚙️ ETL</span>
-            <span class="skill">🗄️ SQL</span>
-            <span class="skill">🐘 PostgreSQL</span>
-            <span class="skill">📊 Power Query</span>
-            <span class="skill">🤖 IA</span>
-            <span class="skill">☁️ Cloud</span>
-            <span class="skill">🔄 Automação</span>
-
-          </div>
-
-        </div>
-
-        <div class="stats">
-
-          <div class="stat">
-            <strong>📊 BI</strong>
-            <small>
-              Dashboards executivos e indicadores estratégicos
-            </small>
-          </div>
-
-          <div class="stat">
-            <strong>🐍 Python</strong>
-            <small>
-              ETLs, automações e integrações de dados
-            </small>
-          </div>
-
-          <div class="stat">
-            <strong>🧠 IA</strong>
-            <small>
-              Machine Learning e Inteligência Artificial aplicada
-            </small>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJETOS -->
-
-  <section id="projetos">
-
-    <div class="container">
-
-      <div class="section-title">
-        <span>Projetos</span>
-        <h2>🚀 Projetos e Dashboards</h2>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- MACHINE LEARNING -->
-
-        <div class="card project-card featured">
-
-          <div>
-
-            <span class="tag">
-              🚀 Projeto Publicado
-            </span>
-
-            <div class="project-icon">
-              ML
-            </div>
-
-            <h3>
-              🏨 Predição de Cancelamento de Reservas
-            </h3>
-
-            <p>
-              Projeto de Ciência de Dados desenvolvido para prever cancelamentos
-              de reservas em hotéis utilizando Machine Learning.
-            </p>
-
-            <p>
-              O projeto utiliza análise exploratória, tratamento de dados,
-              engenharia de features e Random Forest para identificar padrões
-              associados ao cancelamento de reservas.
-            </p>
-
-            <p>
-              <strong>🎯 Objetivo:</strong><br>
-              Reduzir perdas financeiras e apoiar decisões estratégicas através
-              da previsão de reservas com maior risco de cancelamento.
-            </p>
-
-            <p>
-              <strong>📈 Resultado:</strong><br>
-              Modelo com aproximadamente 89% de acurácia.
-            </p>
-
-            <p>
-              <strong>🛠️ Tecnologias:</strong><br>
-              Python • Pandas • Scikit-learn • Matplotlib • Seaborn • Jupyter Notebook
-            </p>
-
-          </div>
-
-          <div class="project-links">
-
-            <a
-              href="https://github.com/LoRodrig/Hotel_Dataset_Analysis"
-              target="_blank"
-            >
-              💻 Ver Projeto
-            </a>
-
-            <a
-              href="https://github.com/LoRodrig/Hotel_Dataset_Analysis/tree/main/Predi%C3%A7%C3%A3o_Cancelamento"
-              target="_blank"
-            >
-              📓 Notebook
-            </a>
-
-          </div>
-
-        </div>
-
-        <!-- OLIST -->
-
-        <div class="card project-card">
-
-          <div>
-
-            <span class="tag">
-              📊 Power BI Publicado
-            </span>
-
-            <div class="project-icon">
-              BI
-            </div>
-
-            <h3>
-              🛒 Painel Gerencial de Vendas — Olist
-            </h3>
-
-            <p>
-              Dashboard executivo desenvolvido em Power BI para análise de vendas,
-              faturamento, pedidos, ticket médio, vendedores e produtos.
-            </p>
-
-            <p>
-              O projeto permite acompanhar indicadores estratégicos de e-commerce
-              através de múltiplas visões gerenciais.
-            </p>
-
-            <p>
-              <strong>📌 Principais funcionalidades:</strong><br>
-              📈 Faturamento mensal<br>
-              💰 Ticket médio<br>
-              📦 Total de pedidos<br>
-              👥 Ranking de vendedores<br>
-              🏙️ Faturamento por estado<br>
-              🛒 Análise de produtos
-            </p>
-
-            <p>
-              <strong>🛠️ Tecnologias:</strong><br>
-              Power BI • DAX • Power Query • Modelagem Dimensional
-            </p>
-
-          </div>
-
-          <div class="project-links">
-
-            <a
-              href="https://app.powerbi.com/view?r=eyJrIjoiZGViYTRjZmMtYjNhNy00NWRkLTk3MDctODA3ZTE3NzAxZWUwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9"
-              target="_blank"
-            >
-              🌐 Abrir Dashboard
-            </a>
-
-            <a
-              href="https://github.com/LoRodrig/Dashboard_Gerencial_Olist"
-              target="_blank"
-            >
-              💻 Ver Repositório
-            </a>
-
-          </div>
-
-        </div>
-
-        <!-- FOLHA -->
-
-        <div class="card project-card">
-
-          <div>
-
-            <span class="tag">
-              📊 Dashboard Publicado
-            </span>
-
-            <div class="project-icon">
-              BI
-            </div>
-
-            <h3>
-              💰 Dashboard de Pagamento de Folha
-            </h3>
-
-            <p>
-              Dashboard desenvolvido para análise de folha de pagamento,
-              encargos e custos por colaborador.
-            </p>
-
-            <p>
-              O projeto permite acompanhar indicadores financeiros relacionados
-              à folha com filtros dinâmicos e visão executiva.
-            </p>
-
-            <p>
-              <strong>📌 Principais funcionalidades:</strong><br>
-              📊 Evolução mensal<br>
-              💰 Proventos e descontos<br>
-              🏢 Custo por setor<br>
-              👥 Indicadores por colaborador
-            </p>
-
-            <p>
-              <strong>🛠️ Tecnologias:</strong><br>
-              HTML • CSS • JavaScript • CSV • GitHub Pages
-            </p>
-
-          </div>
-
-          <div class="project-links">
-
-            <a
-              href="https://lorodrig.github.io/Dashboard-Pagamento-de-Folha/"
-              target="_blank"
-            >
-              🌐 Abrir Dashboard
-            </a>
-
-            <a
-              href="https://github.com/LoRodrig/Dashboard-Pagamento-de-Folha"
-              target="_blank"
-            >
-              💻 Ver Código
-            </a>
-
-          </div>
-
-        </div>
-
-        <!-- FUTUROS -->
-
-        <div class="card project-card">
-
-          <div>
-
-            <div class="project-icon">
-              AI
-            </div>
-
-            <h3>
-              🤖 Próximos Projetos
-            </h3>
-
-            <p>
-              Espaço reservado para projetos futuros envolvendo:
-            </p>
-
-            <p>
-              ⚙️ ETL e Engenharia de Dados<br>
-              🤖 Agentes de IA com n8n<br>
-              ☁️ Integrações Cloud<br>
-              📡 APIs e automações<br>
-              🧠 Machine Learning
-            </p>
-
-            <p>
-              <strong>🛠️ Tecnologias:</strong><br>
-              Python • n8n • PostgreSQL • APIs • IA Generativa
-            </p>
-
-          </div>
-
-          <div class="project-links">
-
-            <a href="#">
-              🚀 Em desenvolvimento
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FORMAÇÃO -->
-
-  <section id="formacao">
-
-    <div class="container">
-
-      <div class="section-title">
-        <span>Carreira</span>
-        <h2>🎓 Formação e Experiência</h2>
-      </div>
-
-      <div class="card timeline">
-
-        <div class="timeline-item">
-
-          <h3>
-            📊 Analista de Business Intelligence
-          </h3>
-
-          <span>
-            BI • Dados • Indicadores • Automação
-          </span>
-
-          <p>
-            Desenvolvimento de dashboards executivos, automações,
-            ETLs, integrações e análise estratégica de dados.
-          </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-          <h3>
-            💻 Análise e Desenvolvimento de Sistemas
-          </h3>
-
-          <span>
-            Formação em tecnologia
-          </span>
-
-          <p>
-            Base sólida em desenvolvimento de sistemas,
-            banco de dados e engenharia de software.
-          </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-          <h3>
-            🧠 Pós-graduação em Ciência de Dados
-          </h3>
-
-          <span>
-            Data Science • Machine Learning • Estatística
-          </span>
-
-          <p>
-            Especialização em análise de dados,
-            modelos preditivos e inteligência artificial.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTATO -->
-
-  <section id="contato" class="contact">
-
-    <div class="container">
-
-      <h2>
-        🚀 Vamos transformar dados em decisões?
-      </h2>
-
-      <p>
-        Estou construindo soluções envolvendo Business Intelligence,
-        Engenharia de Dados, Automação, Python e Inteligência Artificial.
-      </p>
-
-      <div class="buttons" style="justify-content:center;">
-
-        <a
-          href="https://github.com/LoRodrig"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          💻 GitHub
-        </a>
-
-        <a
-          href="mailto:rodrigueslorenzo092@gmail.com"
-          class="btn btn-secondary"
-        >
-          ✉️ E-mail
-        </a>
-
-        <a
-          href="#"
-          class="btn btn-secondary"
-        >
-          🔗 LinkedIn
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="container">
-      © 2026 Lorenzo Rodrigues — Portfólio de Dados, BI, Python e IA.
-    </div>
-
-  </footer>
 
 </body>
 
