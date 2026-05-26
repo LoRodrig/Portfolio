@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -34,7 +35,7 @@
 
     .container{
       width:90%;
-      max-width:1200px;
+      max-width:1250px;
       margin:auto;
     }
 
@@ -45,14 +46,14 @@
       top:0;
       width:100%;
       z-index:1000;
-      background:rgba(7,17,31,0.88);
+      background:rgba(7,17,31,0.90);
       backdrop-filter:blur(14px);
       border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
     .nav-content{
       width:90%;
-      max-width:1200px;
+      max-width:1250px;
       margin:auto;
       display:flex;
       justify-content:space-between;
@@ -61,20 +62,21 @@
     }
 
     .logo{
-      font-size:22px;
+      font-size:24px;
       font-weight:800;
       color:#38bdf8;
     }
 
     .nav-links{
       display:flex;
-      gap:24px;
+      gap:26px;
     }
 
     .nav-links a{
       color:#cbd5e1;
       transition:0.3s;
       font-size:14px;
+      font-weight:600;
     }
 
     .nav-links a:hover{
@@ -91,8 +93,8 @@
       overflow:hidden;
 
       background:
-        radial-gradient(circle at top right, rgba(0,174,255,0.22), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(0,255,179,0.15), transparent 35%),
+        radial-gradient(circle at top right, rgba(0,174,255,0.20), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(0,255,179,0.12), transparent 35%),
         #07111f;
     }
 
@@ -110,24 +112,25 @@
     .hero{
       position:relative;
       z-index:2;
-      padding-top:90px;
+      padding-top:100px;
     }
 
     .badge{
       display:inline-block;
-      padding:8px 16px;
+      padding:10px 18px;
       border-radius:999px;
       background:rgba(56,189,248,0.12);
       border:1px solid rgba(56,189,248,0.3);
       color:#7dd3fc;
       margin-bottom:24px;
       font-size:14px;
+      font-weight:700;
     }
 
     h1{
-      font-size:clamp(44px, 7vw, 78px);
+      font-size:clamp(48px, 8vw, 82px);
       line-height:1.05;
-      max-width:900px;
+      max-width:950px;
       margin-bottom:24px;
     }
 
@@ -140,8 +143,8 @@
     .hero p{
       max-width:760px;
       color:#cbd5e1;
-      font-size:19px;
-      margin-bottom:34px;
+      font-size:20px;
+      margin-bottom:36px;
     }
 
     .buttons{
@@ -151,7 +154,7 @@
     }
 
     .btn{
-      padding:14px 22px;
+      padding:14px 24px;
       border-radius:12px;
       font-weight:700;
       transition:0.3s;
@@ -178,14 +181,14 @@
       background:rgba(255,255,255,0.08);
     }
 
-    /* SECTIONS */
+    /* SECTION */
 
     section{
-      padding:90px 0;
+      padding:95px 0;
     }
 
     .section-title{
-      margin-bottom:45px;
+      margin-bottom:50px;
     }
 
     .section-title span{
@@ -197,17 +200,17 @@
     }
 
     .section-title h2{
-      font-size:38px;
+      font-size:40px;
       margin-top:8px;
     }
 
-    /* CARDS */
+    /* CARD */
 
     .card{
-      background:rgba(15,23,42,0.84);
+      background:rgba(15,23,42,0.88);
       border:1px solid rgba(148,163,184,0.16);
-      border-radius:22px;
-      padding:28px;
+      border-radius:24px;
+      padding:30px;
       box-shadow:0 20px 50px rgba(0,0,0,0.22);
     }
 
@@ -221,7 +224,7 @@
     .about-grid{
       display:grid;
       grid-template-columns:1.2fr 0.8fr;
-      gap:32px;
+      gap:30px;
     }
 
     .skills{
@@ -238,6 +241,7 @@
       border:1px solid rgba(56,189,248,0.22);
       color:#bae6fd;
       font-size:14px;
+      font-weight:600;
     }
 
     .stats{
@@ -258,30 +262,37 @@
 
     .stat strong{
       display:block;
-      font-size:30px;
+      font-size:32px;
       color:#7dd3fc;
       margin-bottom:8px;
     }
 
     .stat small{
       color:#cbd5e1;
+      font-size:15px;
     }
 
     /* PROJECTS */
 
     .projects-grid{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
+      grid-template-columns:repeat(auto-fit, minmax(330px, 1fr));
+      gap:26px;
     }
 
     .project-card{
-      min-height:420px;
+      min-height:480px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
       position:relative;
       overflow:hidden;
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(56,189,248,0.35);
     }
 
     .project-card::before{
@@ -290,7 +301,7 @@
       inset:0;
       background:
         radial-gradient(circle at top right,
-        rgba(56,189,248,0.12),
+        rgba(56,189,248,0.10),
         transparent 45%);
       pointer-events:none;
     }
@@ -309,7 +320,7 @@
 
     .tag{
       display:inline-block;
-      padding:7px 12px;
+      padding:8px 14px;
       border-radius:999px;
       background:rgba(34,197,94,0.12);
       color:#86efac;
@@ -320,9 +331,9 @@
     }
 
     .project-icon{
-      width:58px;
-      height:58px;
-      border-radius:16px;
+      width:60px;
+      height:60px;
+      border-radius:18px;
       background:linear-gradient(135deg, #0284c7, #22c55e);
       display:flex;
       align-items:center;
@@ -330,6 +341,7 @@
       color:white;
       font-weight:900;
       margin-bottom:22px;
+      font-size:18px;
     }
 
     .project-card h3{
@@ -346,19 +358,20 @@
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top:22px;
+      margin-top:24px;
       position:relative;
       z-index:2;
     }
 
     .project-links a{
-      padding:10px 14px;
+      padding:11px 14px;
       border-radius:10px;
       background:rgba(255,255,255,0.07);
       border:1px solid rgba(255,255,255,0.12);
       color:#e2e8f0;
       font-size:13px;
       transition:0.3s;
+      font-weight:600;
     }
 
     .project-links a:hover{
@@ -379,13 +392,14 @@
     }
 
     .timeline-item h3{
-      font-size:20px;
+      font-size:22px;
       margin-bottom:4px;
     }
 
     .timeline-item span{
       color:#7dd3fc;
       font-size:14px;
+      font-weight:700;
     }
 
     .timeline-item p{
@@ -406,20 +420,21 @@
     }
 
     .contact h2{
-      font-size:40px;
+      font-size:42px;
       margin-bottom:18px;
     }
 
     .contact p{
       color:#cbd5e1;
       max-width:720px;
-      margin:0 auto 32px;
+      margin:0 auto 34px;
+      font-size:18px;
     }
 
     /* FOOTER */
 
     footer{
-      padding:26px 0;
+      padding:28px 0;
       text-align:center;
       color:#94a3b8;
       border-top:1px solid rgba(255,255,255,0.08);
@@ -430,8 +445,7 @@
 
     @media(max-width:950px){
 
-      .about-grid,
-      .projects-grid{
+      .about-grid{
         grid-template-columns:1fr;
       }
 
@@ -444,7 +458,11 @@
       }
 
       h1{
-        font-size:46px;
+        font-size:50px;
+      }
+
+      .projects-grid{
+        grid-template-columns:1fr;
       }
 
     }
@@ -495,8 +513,8 @@
 
       <p>
         Sou Lorenzo Rodrigues, profissional de Business Intelligence e Ciência de Dados.
-        Desenvolvo soluções utilizando Power BI, Python, automações e Machine Learning
-        para transformar dados em insights estratégicos.
+        Desenvolvo soluções utilizando Power BI, Python, automações, ETL,
+        Machine Learning e Inteligência Artificial para transformar dados em insights estratégicos.
       </p>
 
       <div class="buttons">
@@ -536,17 +554,18 @@
 
           <p>
             Atuo com desenvolvimento de soluções de Business Intelligence,
-            automações e Ciência de Dados aplicada ao negócio.
+            Engenharia de Dados, automações e Ciência de Dados aplicada ao negócio.
           </p>
 
           <p>
             Tenho experiência com Power BI, DAX, SQL, PostgreSQL, Python,
-            ETL, automações web e análise de dados.
+            ETL, automações web, análise de dados e integração de sistemas.
           </p>
 
           <p>
             Meu foco é construir soluções completas:
-            desde a extração dos dados até a geração de insights estratégicos.
+            desde a extração dos dados até a geração de insights estratégicos,
+            utilizando tecnologia para otimizar processos e apoiar tomadas de decisão.
           </p>
 
           <div class="skills">
@@ -560,6 +579,8 @@
             <span class="skill">🐘 PostgreSQL</span>
             <span class="skill">📊 Power Query</span>
             <span class="skill">🤖 IA</span>
+            <span class="skill">☁️ Cloud</span>
+            <span class="skill">🔄 Automação</span>
 
           </div>
 
@@ -577,14 +598,14 @@
           <div class="stat">
             <strong>🐍 Python</strong>
             <small>
-              Automações, ETLs e análise de dados
+              ETLs, automações e integrações de dados
             </small>
           </div>
 
           <div class="stat">
             <strong>🧠 IA</strong>
             <small>
-              Projetos com Machine Learning e Inteligência Artificial
+              Machine Learning e Inteligência Artificial aplicada
             </small>
           </div>
 
@@ -640,8 +661,8 @@
 
             <p>
               <strong>🎯 Objetivo:</strong><br>
-              Reduzir perdas financeiras e apoiar decisões estratégicas
-              através da previsão de reservas com maior risco de cancelamento.
+              Reduzir perdas financeiras e apoiar decisões estratégicas através
+              da previsão de reservas com maior risco de cancelamento.
             </p>
 
             <p>
@@ -676,7 +697,72 @@
 
         </div>
 
-        <!-- DASHBOARD -->
+        <!-- OLIST -->
+
+        <div class="card project-card">
+
+          <div>
+
+            <span class="tag">
+              📊 Power BI Publicado
+            </span>
+
+            <div class="project-icon">
+              BI
+            </div>
+
+            <h3>
+              🛒 Painel Gerencial de Vendas — Olist
+            </h3>
+
+            <p>
+              Dashboard executivo desenvolvido em Power BI para análise de vendas,
+              faturamento, pedidos, ticket médio, vendedores e produtos.
+            </p>
+
+            <p>
+              O projeto permite acompanhar indicadores estratégicos de e-commerce
+              através de múltiplas visões gerenciais.
+            </p>
+
+            <p>
+              <strong>📌 Principais funcionalidades:</strong><br>
+              📈 Faturamento mensal<br>
+              💰 Ticket médio<br>
+              📦 Total de pedidos<br>
+              👥 Ranking de vendedores<br>
+              🏙️ Faturamento por estado<br>
+              🛒 Análise de produtos
+            </p>
+
+            <p>
+              <strong>🛠️ Tecnologias:</strong><br>
+              Power BI • DAX • Power Query • Modelagem Dimensional
+            </p>
+
+          </div>
+
+          <div class="project-links">
+
+            <a
+              href="https://app.powerbi.com/view?r=eyJrIjoiZGViYTRjZmMtYjNhNy00NWRkLTk3MDctODA3ZTE3NzAxZWUwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9"
+              target="_blank"
+            >
+              🌐 Abrir Dashboard
+            </a>
+
+            <a
+              href="https://github.com/LoRodrig/Dashboard_Gerencial_Olist"
+              target="_blank"
+            >
+              💻 Ver Repositório
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- FOLHA -->
 
         <div class="card project-card">
 
@@ -695,22 +781,21 @@
             </h3>
 
             <p>
-              Dashboard interativo desenvolvido para análise de folha de pagamento,
+              Dashboard desenvolvido para análise de folha de pagamento,
               encargos e custos por colaborador.
             </p>
 
             <p>
-              O projeto permite acompanhar indicadores financeiros relacionados à folha,
-              filtrando colaboradores, cargos, setores e períodos para análise executiva.
+              O projeto permite acompanhar indicadores financeiros relacionados
+              à folha com filtros dinâmicos e visão executiva.
             </p>
 
             <p>
               <strong>📌 Principais funcionalidades:</strong><br>
-              📊 Evolução mensal da folha<br>
-              💰 Análise de proventos e descontos<br>
+              📊 Evolução mensal<br>
+              💰 Proventos e descontos<br>
               🏢 Custo por setor<br>
-              👥 Filtros dinâmicos por colaborador<br>
-              📈 Indicadores executivos
+              👥 Indicadores por colaborador
             </p>
 
             <p>
@@ -755,20 +840,20 @@
             </h3>
 
             <p>
-              Espaço reservado para futuros projetos envolvendo:
+              Espaço reservado para projetos futuros envolvendo:
             </p>
 
             <p>
-              ⚙️ Automação<br>
-              🤖 Inteligência Artificial<br>
-              🧠 Machine Learning<br>
+              ⚙️ ETL e Engenharia de Dados<br>
+              🤖 Agentes de IA com n8n<br>
               ☁️ Integrações Cloud<br>
-              🔄 Engenharia de Dados
+              📡 APIs e automações<br>
+              🧠 Machine Learning
             </p>
 
             <p>
               <strong>🛠️ Tecnologias:</strong><br>
-              Python • APIs • SQL • IA Generativa
+              Python • n8n • PostgreSQL • APIs • IA Generativa
             </p>
 
           </div>
@@ -813,8 +898,8 @@
           </span>
 
           <p>
-            Desenvolvimento de dashboards, indicadores estratégicos,
-            integração de dados e automação de processos.
+            Desenvolvimento de dashboards executivos, automações,
+            ETLs, integrações e análise estratégica de dados.
           </p>
 
         </div>
@@ -822,7 +907,7 @@
         <div class="timeline-item">
 
           <h3>
-            💻 Graduação em Análise e Desenvolvimento de Sistemas
+            💻 Análise e Desenvolvimento de Sistemas
           </h3>
 
           <span>
@@ -847,7 +932,7 @@
           </span>
 
           <p>
-            Aprofundamento em análise de dados,
+            Especialização em análise de dados,
             modelos preditivos e inteligência artificial.
           </p>
 
@@ -866,12 +951,12 @@
     <div class="container">
 
       <h2>
-        🚀 Vamos conectar dados ao negócio?
+        🚀 Vamos transformar dados em decisões?
       </h2>
 
       <p>
-        Busco desenvolver soluções que transformem dados em decisões inteligentes,
-        utilizando tecnologia, automação e análise estratégica.
+        Estou construindo soluções envolvendo Business Intelligence,
+        Engenharia de Dados, Automação, Python e Inteligência Artificial.
       </p>
 
       <div class="buttons" style="justify-content:center;">
