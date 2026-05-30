@@ -279,38 +279,19 @@
 
     .project-card:hover{
       transform:translateY(-6px);
-      border-color:rgba(56,189,248,0.35);
     }
 
     .project-card::before{
       content:"";
       position:absolute;
       inset:0;
-      background:
-        radial-gradient(circle at top right,
-        rgba(56,189,248,0.10),
-        transparent 45%);
       pointer-events:none;
-    }
-
-    .featured{
-      border:1px solid rgba(34,197,94,0.35);
-      background:
-        linear-gradient(
-          135deg,
-          rgba(34,197,94,0.08),
-          rgba(56,189,248,0.06)
-        ),
-        rgba(15,23,42,0.84);
     }
 
     .tag{
       display:inline-block;
       padding:8px 14px;
       border-radius:999px;
-      background:rgba(34,197,94,0.12);
-      color:#86efac;
-      border:1px solid rgba(34,197,94,0.28);
       font-size:13px;
       font-weight:700;
       margin-bottom:18px;
@@ -320,7 +301,6 @@
       width:60px;
       height:60px;
       border-radius:18px;
-      background:linear-gradient(135deg, #0284c7, #22c55e);
       display:flex;
       align-items:center;
       justify-content:center;
@@ -363,6 +343,130 @@
     .project-links a:hover{
       background:rgba(56,189,248,0.15);
       color:#7dd3fc;
+    }
+
+    .card-etl{
+      border:1px solid rgba(248,113,113,0.38);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(248,113,113,0.12),
+          rgba(56,189,248,0.05)
+        ),
+        rgba(15,23,42,0.86);
+    }
+
+    .card-etl:hover{
+      border-color:rgba(248,113,113,0.65);
+      box-shadow:0 24px 60px rgba(248,113,113,0.10);
+    }
+
+    .card-etl::before{
+      background:
+        radial-gradient(circle at top right, rgba(248,113,113,0.16), transparent 45%);
+    }
+
+    .card-etl .tag{
+      background:rgba(248,113,113,0.12);
+      color:#fecaca;
+      border:1px solid rgba(248,113,113,0.35);
+    }
+
+    .card-etl .project-icon{
+      background:linear-gradient(135deg, #ef4444, #f97316);
+    }
+
+    .card-ml{
+      border:1px solid rgba(250,204,21,0.38);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(250,204,21,0.10),
+          rgba(56,189,248,0.05)
+        ),
+        rgba(15,23,42,0.86);
+    }
+
+    .card-ml:hover{
+      border-color:rgba(250,204,21,0.65);
+      box-shadow:0 24px 60px rgba(250,204,21,0.09);
+    }
+
+    .card-ml::before{
+      background:
+        radial-gradient(circle at top right, rgba(250,204,21,0.15), transparent 45%);
+    }
+
+    .card-ml .tag{
+      background:rgba(250,204,21,0.12);
+      color:#fef3c7;
+      border:1px solid rgba(250,204,21,0.35);
+    }
+
+    .card-ml .project-icon{
+      background:linear-gradient(135deg, #f59e0b, #eab308);
+    }
+
+    .card-bi{
+      border:1px solid rgba(34,197,94,0.38);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,197,94,0.10),
+          rgba(56,189,248,0.05)
+        ),
+        rgba(15,23,42,0.86);
+    }
+
+    .card-bi:hover{
+      border-color:rgba(34,197,94,0.65);
+      box-shadow:0 24px 60px rgba(34,197,94,0.09);
+    }
+
+    .card-bi::before{
+      background:
+        radial-gradient(circle at top right, rgba(34,197,94,0.15), transparent 45%);
+    }
+
+    .card-bi .tag{
+      background:rgba(34,197,94,0.12);
+      color:#bbf7d0;
+      border:1px solid rgba(34,197,94,0.35);
+    }
+
+    .card-bi .project-icon{
+      background:linear-gradient(135deg, #16a34a, #22c55e);
+    }
+
+    .card-ai{
+      border:1px solid rgba(168,85,247,0.38);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(168,85,247,0.10),
+          rgba(56,189,248,0.05)
+        ),
+        rgba(15,23,42,0.86);
+    }
+
+    .card-ai:hover{
+      border-color:rgba(168,85,247,0.65);
+      box-shadow:0 24px 60px rgba(168,85,247,0.09);
+    }
+
+    .card-ai::before{
+      background:
+        radial-gradient(circle at top right, rgba(168,85,247,0.15), transparent 45%);
+    }
+
+    .card-ai .tag{
+      background:rgba(168,85,247,0.12);
+      color:#e9d5ff;
+      border:1px solid rgba(168,85,247,0.35);
+    }
+
+    .card-ai .project-icon{
+      background:linear-gradient(135deg, #7c3aed, #a855f7);
     }
 
     .timeline{
@@ -501,7 +605,7 @@
     <div class="container hero">
 
       <div class="badge">
-        Business Intelligence • Python • Ciência de Dados • Engenharia de Dados • IA
+        📊 Business Intelligence • 🐍 Python • 🧠 Ciência de Dados • ⚙️ Engenharia de Dados • 🤖 IA
       </div>
 
       <h1>
@@ -521,7 +625,7 @@
       <div class="buttons">
 
         <a href="#projetos" class="btn btn-primary">
-          Ver Projetos
+          🚀 Ver Projetos
         </a>
 
         <a
@@ -529,7 +633,7 @@
           target="_blank"
           class="btn btn-secondary"
         >
-          GitHub
+          💻 GitHub
         </a>
 
         <a
@@ -537,7 +641,7 @@
           target="_blank"
           class="btn btn-secondary"
         >
-          LinkedIn
+          🔗 LinkedIn
         </a>
 
       </div>
@@ -552,7 +656,7 @@
 
       <div class="section-title">
         <span>Sobre mim</span>
-        <h2>Perfil Profissional</h2>
+        <h2>📌 Perfil Profissional</h2>
       </div>
 
       <div class="about-grid">
@@ -579,20 +683,20 @@
 
           <div class="skills">
 
-            <span class="skill">Power BI</span>
-            <span class="skill">DAX</span>
-            <span class="skill">Python</span>
-            <span class="skill">Machine Learning</span>
-            <span class="skill">ETL</span>
-            <span class="skill">SQL</span>
-            <span class="skill">PostgreSQL</span>
-            <span class="skill">PostGIS</span>
-            <span class="skill">Power Query</span>
-            <span class="skill">IA</span>
-            <span class="skill">Cloud</span>
-            <span class="skill">Automação</span>
-            <span class="skill">Análise de Processos</span>
-            <span class="skill">Qualidade</span>
+            <span class="skill">📊 Power BI</span>
+            <span class="skill">📈 DAX</span>
+            <span class="skill">🐍 Python</span>
+            <span class="skill">🧠 Machine Learning</span>
+            <span class="skill">⚙️ ETL</span>
+            <span class="skill">🗄️ SQL</span>
+            <span class="skill">🐘 PostgreSQL</span>
+            <span class="skill">🌍 PostGIS</span>
+            <span class="skill">📊 Power Query</span>
+            <span class="skill">🤖 IA</span>
+            <span class="skill">☁️ Cloud</span>
+            <span class="skill">🔄 Automação</span>
+            <span class="skill">🧩 Análise de Processos</span>
+            <span class="skill">✅ Qualidade</span>
 
           </div>
 
@@ -601,21 +705,21 @@
         <div class="stats">
 
           <div class="stat">
-            <strong>BI</strong>
+            <strong>📊 BI</strong>
             <small>
               Dashboards executivos, indicadores estratégicos e visualização de dados.
             </small>
           </div>
 
           <div class="stat">
-            <strong>Python</strong>
+            <strong>🐍 Python</strong>
             <small>
               ETLs, automações, integrações de dados e análises avançadas.
             </small>
           </div>
 
           <div class="stat">
-            <strong>Processos</strong>
+            <strong>🧩 Processos</strong>
             <small>
               Análise de processos, melhoria contínua, controle de qualidade e eficiência operacional.
             </small>
@@ -635,17 +739,17 @@
 
       <div class="section-title">
         <span>Projetos</span>
-        <h2>Projetos e Dashboards</h2>
+        <h2>🚀 Projetos e Dashboards</h2>
       </div>
 
       <div class="projects-grid">
 
-        <div class="card project-card featured">
+        <div class="card project-card card-etl">
 
           <div>
 
             <span class="tag">
-              Engenharia de Dados • Projeto Local Publicado
+              🚀 Engenharia de Dados • Projeto Local Publicado
             </span>
 
             <div class="project-icon">
@@ -653,7 +757,7 @@
             </div>
 
             <h3>
-              Prospector CNPJ — Plataforma Geoespacial de Empresas
+              🌍 Prospector CNPJ — Plataforma Geoespacial de Empresas
             </h3>
 
             <p>
@@ -667,18 +771,18 @@
             </p>
 
             <p>
-              <strong>Objetivo:</strong><br>
+              <strong>🎯 Objetivo:</strong><br>
               Validar uma arquitetura completa de ETL, banco geoespacial e aplicação web,
               com potencial de expansão para outras cidades e estados.
             </p>
 
             <p>
-              <strong>Funcionalidades:</strong><br>
-              Busca por cidade e raio • Filtro por CNAE • Mapa interativo • Exportação CSV
+              <strong>📌 Funcionalidades:</strong><br>
+              🔎 Busca por cidade e raio • 🧾 Filtro por CNAE • 🗺️ Mapa interativo • 📥 Exportação CSV
             </p>
 
             <p>
-              <strong>Tecnologias:</strong><br>
+              <strong>🛠️ Tecnologias:</strong><br>
               Python • PostgreSQL • PostGIS • Supabase • GitHub Actions • JavaScript • Leaflet.js • Chart.js
             </p>
 
@@ -690,26 +794,26 @@
               href="https://lorodrig.github.io/prospector-cnpj/"
               target="_blank"
             >
-              Abrir Projeto
+              🌐 Abrir Projeto
             </a>
 
             <a
               href="https://github.com/LoRodrig/prospector-cnpj"
               target="_blank"
             >
-              Ver Código
+              💻 Ver Código
             </a>
 
           </div>
 
         </div>
 
-        <div class="card project-card featured">
+        <div class="card project-card card-ml">
 
           <div>
 
             <span class="tag">
-              Ciência de Dados • Machine Learning
+              🧠 Ciência de Dados • Machine Learning
             </span>
 
             <div class="project-icon">
@@ -717,7 +821,7 @@
             </div>
 
             <h3>
-              Predição de Cancelamento de Reservas
+              🏨 Predição de Cancelamento de Reservas
             </h3>
 
             <p>
@@ -732,18 +836,18 @@
             </p>
 
             <p>
-              <strong>Objetivo:</strong><br>
+              <strong>🎯 Objetivo:</strong><br>
               Reduzir perdas financeiras e apoiar decisões estratégicas através
               da previsão de reservas com maior risco de cancelamento.
             </p>
 
             <p>
-              <strong>Resultado:</strong><br>
+              <strong>📈 Resultado:</strong><br>
               Modelo com aproximadamente 89% de acurácia.
             </p>
 
             <p>
-              <strong>Tecnologias:</strong><br>
+              <strong>🛠️ Tecnologias:</strong><br>
               Python • Pandas • Scikit-learn • Matplotlib • Seaborn • Jupyter Notebook
             </p>
 
@@ -755,26 +859,26 @@
               href="https://github.com/LoRodrig/Hotel_Dataset_Analysis"
               target="_blank"
             >
-              Ver Projeto
+              💻 Ver Projeto
             </a>
 
             <a
               href="https://github.com/LoRodrig/Hotel_Dataset_Analysis/tree/main/Predi%C3%A7%C3%A3o_Cancelamento"
               target="_blank"
             >
-              Notebook
+              📓 Notebook
             </a>
 
           </div>
 
         </div>
 
-        <div class="card project-card">
+        <div class="card project-card card-bi">
 
           <div>
 
             <span class="tag">
-              Power BI Publicado
+              📊 Power BI Publicado
             </span>
 
             <div class="project-icon">
@@ -782,7 +886,7 @@
             </div>
 
             <h3>
-              Painel Gerencial de Vendas — Olist
+              🛒 Painel Gerencial de Vendas — Olist
             </h3>
 
             <p>
@@ -796,17 +900,17 @@
             </p>
 
             <p>
-              <strong>Principais funcionalidades:</strong><br>
-              Faturamento mensal<br>
-              Ticket médio<br>
-              Total de pedidos<br>
-              Ranking de vendedores<br>
-              Faturamento por estado<br>
-              Análise de produtos
+              <strong>📌 Principais funcionalidades:</strong><br>
+              📈 Faturamento mensal<br>
+              💰 Ticket médio<br>
+              📦 Total de pedidos<br>
+              👥 Ranking de vendedores<br>
+              🏙️ Faturamento por estado<br>
+              🛒 Análise de produtos
             </p>
 
             <p>
-              <strong>Tecnologias:</strong><br>
+              <strong>🛠️ Tecnologias:</strong><br>
               Power BI • DAX • Power Query • Modelagem Dimensional
             </p>
 
@@ -818,26 +922,26 @@
               href="https://app.powerbi.com/view?r=eyJrIjoiZGViYTRjZmMtYjNhNy00NWRkLTk3MDctODA3ZTE3NzAxZWUwIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9"
               target="_blank"
             >
-              Abrir Dashboard
+              🌐 Abrir Dashboard
             </a>
 
             <a
               href="https://github.com/LoRodrig/Dashboard_Gerencial_Olist"
               target="_blank"
             >
-              Ver Repositório
+              💻 Ver Repositório
             </a>
 
           </div>
 
         </div>
 
-        <div class="card project-card">
+        <div class="card project-card card-bi">
 
           <div>
 
             <span class="tag">
-              Dashboard Publicado
+              📊 Dashboard Publicado
             </span>
 
             <div class="project-icon">
@@ -845,7 +949,7 @@
             </div>
 
             <h3>
-              Dashboard de Pagamento de Folha
+              💰 Dashboard de Pagamento de Folha
             </h3>
 
             <p>
@@ -859,15 +963,15 @@
             </p>
 
             <p>
-              <strong>Principais funcionalidades:</strong><br>
-              Evolução mensal<br>
-              Proventos e descontos<br>
-              Custo por setor<br>
-              Indicadores por colaborador
+              <strong>📌 Principais funcionalidades:</strong><br>
+              📊 Evolução mensal<br>
+              💰 Proventos e descontos<br>
+              🏢 Custo por setor<br>
+              👥 Indicadores por colaborador
             </p>
 
             <p>
-              <strong>Tecnologias:</strong><br>
+              <strong>🛠️ Tecnologias:</strong><br>
               HTML • CSS • JavaScript • CSV • GitHub Pages
             </p>
 
@@ -879,30 +983,34 @@
               href="https://lorodrig.github.io/Dashboard-Pagamento-de-Folha/"
               target="_blank"
             >
-              Abrir Dashboard
+              🌐 Abrir Dashboard
             </a>
 
             <a
               href="https://github.com/LoRodrig/Dashboard-Pagamento-de-Folha"
               target="_blank"
             >
-              Ver Código
+              💻 Ver Código
             </a>
 
           </div>
 
         </div>
 
-        <div class="card project-card">
+        <div class="card project-card card-ai">
 
           <div>
+
+            <span class="tag">
+              🤖 IA • Em desenvolvimento
+            </span>
 
             <div class="project-icon">
               IA
             </div>
 
             <h3>
-              Próximos Projetos
+              🤖 Próximos Projetos
             </h3>
 
             <p>
@@ -910,15 +1018,15 @@
             </p>
 
             <p>
-              ETL e Engenharia de Dados<br>
-              Agentes de IA com n8n<br>
-              Integrações Cloud<br>
-              APIs e automações<br>
-              Machine Learning
+              ⚙️ ETL e Engenharia de Dados<br>
+              🤖 Agentes de IA com n8n<br>
+              ☁️ Integrações Cloud<br>
+              📡 APIs e automações<br>
+              🧠 Machine Learning
             </p>
 
             <p>
-              <strong>Tecnologias:</strong><br>
+              <strong>🛠️ Tecnologias:</strong><br>
               Python • n8n • PostgreSQL • APIs • IA Generativa
             </p>
 
@@ -927,7 +1035,7 @@
           <div class="project-links">
 
             <a href="#">
-              Em desenvolvimento
+              🚀 Em desenvolvimento
             </a>
 
           </div>
@@ -946,7 +1054,7 @@
 
       <div class="section-title">
         <span>Carreira</span>
-        <h2>Formação e Experiência</h2>
+        <h2>🎓 Formação e Experiência</h2>
       </div>
 
       <div class="card timeline">
@@ -954,7 +1062,7 @@
         <div class="timeline-item">
 
           <h3>
-            Business Intelligence e Dados
+            📊 Business Intelligence e Dados
           </h3>
 
           <span>
@@ -972,7 +1080,7 @@
         <div class="timeline-item">
 
           <h3>
-            Análise de Processos e Qualidade
+            🧩 Análise de Processos e Qualidade
           </h3>
 
           <span>
@@ -990,7 +1098,7 @@
         <div class="timeline-item">
 
           <h3>
-            Análise e Desenvolvimento de Sistemas
+            💻 Análise e Desenvolvimento de Sistemas
           </h3>
 
           <span>
@@ -1008,7 +1116,7 @@
         <div class="timeline-item">
 
           <h3>
-            Pós-graduação em Ciência de Dados
+            🧠 Pós-graduação em Ciência de Dados
           </h3>
 
           <span>
@@ -1034,7 +1142,7 @@
     <div class="container">
 
       <h2>
-        Vamos transformar dados em decisões?
+        🚀 Vamos transformar dados em decisões?
       </h2>
 
       <p>
@@ -1050,14 +1158,14 @@
           target="_blank"
           class="btn btn-primary"
         >
-          GitHub
+          💻 GitHub
         </a>
 
         <a
           href="mailto:rodrigueslorenzo092@gmail.com"
           class="btn btn-secondary"
         >
-          E-mail
+          ✉️ E-mail
         </a>
 
         <a
@@ -1065,7 +1173,7 @@
           target="_blank"
           class="btn btn-secondary"
         >
-          LinkedIn
+          🔗 LinkedIn
         </a>
 
       </div>
@@ -1073,14 +1181,14 @@
       <div class="contact-info">
 
         <p>
-          <strong>E-mail:</strong>
+          ✉️ <strong>E-mail:</strong>
           <a href="mailto:rodrigueslorenzo092@gmail.com">
             rodrigueslorenzo092@gmail.com
           </a>
         </p>
 
         <p>
-          <strong>LinkedIn:</strong>
+          🔗 <strong>LinkedIn:</strong>
           <a
             href="https://www.linkedin.com/in/lorenzo-rodrigues-a01682208/"
             target="_blank"
