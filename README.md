@@ -8,7 +8,7 @@ O objetivo deste portfólio é reunir projetos práticos que demonstram minha ca
 
 Site publicado:
 
-https://lorodrig.github.io/portfolio/
+[https://lorodrig.github.io/portfolio/](https://lorodrig.github.io/Portfolio/)
 
 ## Sobre mim
 
